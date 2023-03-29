@@ -17,7 +17,7 @@ It is built using [reactvulna](https://github.com/vulnerable-apps/reactvulna) an
 ```bash
 git clone https://github.com/vulnerable-apps/vulnerable-react-app.git
 cd vulnerable-react-app
-git submodule update --init --recursive
+git submodule update --remote --merge
 ```
 
 * Build and run the app
