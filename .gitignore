@@ -1,0 +1,19 @@
+# IDEs
+.idea
+.vscode
+
+# Mac OS X
+.DS_Store
+
+# JavaScript
+node_modules/*
+
+# Working directories
+tmp/*
+!.gitkeep
+
+# Python
+.pytest_cache/*
+env/*
+venv/*
+__pycache__/
