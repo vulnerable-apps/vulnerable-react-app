@@ -1,0 +1,6 @@
+[submodule "reactvulna"]
+	path = reactvulna
+	url = https://github.com/vulnerable-apps/reactvulna.git
+[submodule "javulna"]
+	path = javulna
+	url = https://github.com/vulnerable-apps/javulna.git

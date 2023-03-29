@@ -1,0 +1,30 @@
+version: '3.9'
+
+services:
+  javulna:
+    container_name: javulna
+    ports:
+    - 8080:8080
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile-java
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  reactvulna:
+    container_name: reactvulna
+    ports:
+    - 3000:3000
+    depends_on:
+      - javulna
+    links:
+      - javulna
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    build:
+      context: .
+      dockerfile: Dockerfile-react
+    environment:
+      - BACKEND_URL_BASE=http://javulna:8080
+      - BACKEND_REST_URL_BASE=http://javulna:8080/rest/
